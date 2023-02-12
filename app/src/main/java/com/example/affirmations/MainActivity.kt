@@ -26,7 +26,8 @@ class MainActivity : AppCompatActivity() {
         val myDataset = DataSource().loadAffirmations()
         val recyclerView = binding.recyclerView
         recyclerView.setHasFixedSize(true)
-        recyclerView.layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)//
+        recyclerView.layoutManager =
+            StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)//
         adapter = ItemAdapter(this, myDataset)
         recyclerView.adapter = adapter
     }
